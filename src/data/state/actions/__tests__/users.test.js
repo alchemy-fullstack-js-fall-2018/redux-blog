@@ -2,7 +2,7 @@ import { fetchUsers, FETCH_USERS, USERS_LOAD_START, USERS_LOAD_END } from '../us
 
 jest.mock('../../../services/blogApi.js');
 
-describe('users actions', () => {
+describe('fetchUsers', () => {
   test('has a promise as its payload', () => {
     const action = fetchUsers();
     expect(typeof action.payload.then).toEqual('function');
