@@ -4,13 +4,16 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import Header from '../header/Header';
+import 'normalize.css';
 
 export default function App() {
   return (
     <Router>
       <Fragment>
+        <Header />
         <Switch>
-          
+
         </Switch>
       </Fragment>
     </Router>
