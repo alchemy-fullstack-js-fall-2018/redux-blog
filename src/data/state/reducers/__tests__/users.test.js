@@ -42,7 +42,7 @@ describe('user reducer', () => {
 
     const newState = reducer(state, {
       type: 'MADE_UP_TYPE',
-      payload: 'purple'
+      payload: 'asdf'
     });
 
     expect(newState).toEqual(state);
