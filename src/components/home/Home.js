@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Posts from '../../containers/posts/Posts';
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <p>
         Lorem ipsum dolor Bob Ross... Let’s make a happy little mountain now. You have to make almighty decisions when you’re the creator. Let’s make a nice big leafy tree. Remember how free clouds are. They just lay around in the sky all day long.
       </p>
+      <Posts />
     </Fragment>
   );
 };
