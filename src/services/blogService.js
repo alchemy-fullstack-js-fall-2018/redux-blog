@@ -8,7 +8,7 @@ export const getComments = ( postId ) => {
     .then(res => res.json())
 };
 
-console.log(getComments);
+// console.log(getComments);
 // export const getAbilities = () => {
 //   return fetch(`https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v2/ability/`)
 //     .then(res => res.json())
