@@ -2,15 +2,20 @@ import queryString from 'querystring';
 
 export const getComments = ( postId ) => {
   const queryStr = queryString.stringify({ postId });
-  return fetch(`https://jsonplaceholder.typicode.com/${postId}/`, {
+  return fetch(`https://jsonplaceholder.typicode.com/Comments/${postId}/`, {
   // headers: { origin: null }
   })
     .then(res => res.json())
 };
 
-// console.log(getComments);
-// export const getAbilities = () => {
-//   return fetch(`https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v2/ability/`)
-//     .then(res => res.json())
-//     .then(json => json.results.map(ability => ability.name))
-// };
+console.log(getComments);
+
+export const getUsers = () => {
+  return fetch(`https://jsonplaceholder.typicode.com/Users`)
+    .then(res => res.json())
+};
+
+export const getPosts = () => {
+  return fetch(`https://jsonplaceholder.typicode.com/Posts`)
+    .then(res => res.json())
+};
