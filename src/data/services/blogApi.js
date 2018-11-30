@@ -1,22 +1,16 @@
 import { get } from '../lib/request';
 
 export const getUsers = () => {
-  return get('https://jsonplaceholder.typicode.com/posts')
+  return get('https://jsonplaceholder.typicode.com/users')
     .then((users) => ({ users: users }));
 };
 
+export const getPosts = () => {
+  return get('https://jsonplaceholder.typicode.com/posts')
+    .then((posts) => ({ posts: posts }));
+};
 
-
-export const getUser = (id) => {
-  return get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-    .then(({ count, artists }) => {
-      return {
-        pages: Math.ceil(count / PAGE_SIZE),
-        artists: artists.map(artist => ({
-          name: artist.name,
-          description: artist.disambiguation || '',
-          id: artist.id
-        }))
-      };
-    });
+export const getComments = () => {
+  return get('https://jsonplaceholder.typicode.com/comments')
+    .then((comments) => ({ comments: comments }));
 };
