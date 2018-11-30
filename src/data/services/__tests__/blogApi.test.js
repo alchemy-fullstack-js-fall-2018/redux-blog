@@ -24,7 +24,7 @@ describe('blogApi user resources', () => {
 
   describe('getUsers', () => {
 
-    it('has a list of users with user details', () => {
+    test('has a list of users with user details', () => {
       return getUsers()
         .then(results => {
           results.users.forEach(user => {
@@ -62,7 +62,7 @@ describe('blogApi posts resources', () => {
 
   describe('getPosts', () => {
 
-    it('has a list of posts with userId, id, title, and body', () => {
+    test('has a list of posts with userId, id, title, and body', () => {
       return getPosts()
         .then(results => {
           results.posts.forEach(post => {
@@ -83,7 +83,7 @@ describe('blogApi comments resources', () => {
 
   describe('getComments', () => {
 
-    it('has a list of comments with postId, id, name, email, and body', () => {
+    test('has a list of comments with postId, id, name, email, and body', () => {
       return getComments()
         .then(results => {
           results.comments.forEach(comment => {
