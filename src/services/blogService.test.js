@@ -7,8 +7,11 @@ jest.mock('./request.js', () => ({
   get: url => {
     if(url.startsWith('https://jsonplaceholder.typicode.com/users')) {
       return Promise.resolve(mockUsersJson);
-    }
-    else {
+    } else if(url.startsWith('https://jsonplaceholder.typicode.com/posts')) {
+      return Promise.resolve(mockPostsJson);
+    } else if(url.startsWith('https://jsonplaceholder.typicode.com/comments/?postId')) {
+      return Promise.resolve(mockCommentsJson);
+    } else {
       return Promise.reject({ error: '404' });
     }
   }
@@ -18,14 +21,51 @@ describe('getUsers', () => {
   it('gets a list of users from the API', () => {
     return getUsers()
       .then(users => {
-        console.log(users);
-        expect(users).toBeTruthy();
+        users.forEach(user => {
+          expect(user).toEqual({
+            id: expect.any(Number),
+            name: expect.any(String),
+            email: expect.any(String),
+            address: expect.any(Object),
+            phone: expect.any(String),
+            website: expect.any(String),
+            company: expect.any(Object)
+          });
+        });
       });
   });
 });
 
-// describe('getComments', () => {
-//   it('gets a list of comments from the API', () => {
-//     const comments = getComments()
-//   });
-// });
+describe('getPosts', () => {
+  it('gets a list of posts from the API', () => {
+    return getPosts()
+      .then(posts => {
+        posts.forEach(post => {
+          expect(post).toEqual({
+            userId: expect.any(Number),
+            id: expect.any(Number),
+            title: expect.any(String),
+            body: expect.any(String)
+          });
+        });
+      });
+  });
+});
+
+describe('getComments', () => {
+  it('gets a list comments from the API belonging to one post', () => {
+    return getComments()
+      .then(comments => {
+        console.log(comments);
+        comments.forEach(comment => {
+          expect(comment).toEqual({
+            postId: undefined, /* WHY? */
+            id: expect.any(Number),
+            name: expect.any(String),
+            email: expect.any(String),
+            body: expect.any(String)
+          });
+        });
+      });
+  });
+});
