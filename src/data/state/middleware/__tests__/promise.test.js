@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 describe('isPromise?', () => {
 
   test('it returns true if payload is promise', () => {
+    // eslint-disable-next-line no-unused-vars
     const promise = () => new Promise((resolve, reject) => resolve('done'));
     const test = isPromise(promise());
     expect(test).toBe(true);
