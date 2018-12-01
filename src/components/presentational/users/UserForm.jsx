@@ -26,13 +26,17 @@ const StyledDiv = styled.div`
 
 export default class UserForm extends PureComponent {
   static propTypes = {
-    registerCar: PropTypes.func.isRequired
+    registerUser: PropTypes.func.isRequired
   };
 
   state = {
-    plate: '',
-    make: '',
-    model: ''
+    name: '',
+    username: '',
+    email: '',
+    address: '',
+    phone: '',
+    website: '',
+    company: ''
   };
 
   onChange = event => {
@@ -40,36 +44,38 @@ export default class UserForm extends PureComponent {
     this.setState({ [target.name]: target.value });
   };
 
-  saveCar = event => {
+  saveUser = event => {
     event.preventDefault();
-    const { plate, make, model } = this.state;
-    this.props.registerCar({ plate, make, model });
-    this.props.history.push('/cars');
+    const { name, username, email } = this.state;
+    this.props.registerUser({ name, username, email });
+    this.props.history.push('/users');
   };
 
-
   render() {
-    const { plate, make, model } = this.state;
+    const {
+      name, username, email,
+      // address, phone, website, company
+    } = this.state;
 
     return (
-      <form onSubmit={this.saveCar}>
+      <form onSubmit={this.saveUser}>
         <StyledDiv>
-          <label htmlFor="plate">Plate</label>
+          <label htmlFor="name">Name</label>
           <input
-            name="plate" type="text"
-            value={plate} onChange={this.onChange}
+            name="name" type="text"
+            value={name} onChange={this.onChange}
           ></input>
 
-          <label htmlFor="make">Make</label>
+          <label htmlFor="username">Username</label>
           <input
-            name="make" type="text"
-            value={make} onChange={this.onChange}
+            name="username" type="text"
+            value={username} onChange={this.onChange}
           ></input>
 
-          <label htmlFor="model">Model</label>
+          <label htmlFor="email">Email</label>
           <input
-            name="model" type="text"
-            value={model} onChange={this.onChange}
+            name="email" type="text"
+            value={email} onChange={this.onChange}
           ></input>
         </StyledDiv>
 

@@ -4,6 +4,7 @@ import PostListFilter from '../components/container/posts/PostListFilter.js';
 import PostDetailId from '../components/container/posts/PostDetailId.js';
 import UserListAll from '../components/container/users/UserListAll';
 import UserDetailId from '../components/container/users/UserDetailId';
+import UserRegister from '../components/container/users/UserRegister';
 
 export const ROUTES = {
   ABOUT: {
@@ -38,7 +39,7 @@ export const ROUTES = {
   },
   USER_REGISTER: {
     path: '/users/new',
-    Component: UserDetailId,
+    Component: UserRegister,
     linkTo: () => '/users/new'
   }
 };

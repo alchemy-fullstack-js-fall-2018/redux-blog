@@ -9,3 +9,9 @@ export const fetchUsers = () => ({
   loadEnd: USERS_LOAD_END,
   payload: getUsers()
 });
+
+export const REGISTER_USER = 'REGISTER_USER';
+export const registerUser = user => ({
+  type: REGISTER_USER,
+  payload: user
+});

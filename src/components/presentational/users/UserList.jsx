@@ -16,7 +16,7 @@ export default class UserList extends PureComponent {
   };
 
   componentDidMount() {
-    this.props.fetchUsers();
+    if(!this.props.users) this.props.fetchUsers();
   }
 
   render() {

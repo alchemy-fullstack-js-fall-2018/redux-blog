@@ -25,7 +25,6 @@ export default class UserDetail extends PureComponent {
         <p>name: {name}</p>
         <p>username: {username}</p>
         <p>email: {email}</p>
-
         <p>phone: {phone}</p>
         <p>website: {website}</p>
         <PostList posts={posts} />
