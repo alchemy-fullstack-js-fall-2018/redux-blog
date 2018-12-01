@@ -6,30 +6,31 @@ exports[`<Header /> renders 1`] = `
     Redux Blogging
   </h1>
   <styled.nav>
-    <Styled(Link)
+    <Input
+      key="About"
+      label="About"
+      path="/about"
+    />
+    <Input
       key="Home"
-      to="/home"
-    >
-      Home
-    </Styled(Link)>
-    <Styled(Link)
+      label="Home"
+      path="/home"
+    />
+    <Input
       key="Posts"
-      to="/posts/search"
-    >
-      Posts
-    </Styled(Link)>
-    <Styled(Link)
+      label="Posts"
+      path="/posts/search"
+    />
+    <Input
       key="Users"
-      to="/users"
-    >
-      Users
-    </Styled(Link)>
-    <Styled(Link)
+      label="Users"
+      path="/users"
+    />
+    <Input
       key="Register"
-      to="/users/new"
-    >
-      Register
-    </Styled(Link)>
+      label="Register"
+      path="/users/new"
+    />
   </styled.nav>
 </styled.header>
 `;
