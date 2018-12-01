@@ -3,10 +3,10 @@
 exports[`<About /> renders 1`] = `
 <section>
   <h2>
-    Keep listening
+    You found me!
   </h2>
   <p>
-    The world is a wonderful place, and you never know what you might hear
+    I am an about page that, but about _what_, I have not a clue.
   </p>
 </section>
 `;
