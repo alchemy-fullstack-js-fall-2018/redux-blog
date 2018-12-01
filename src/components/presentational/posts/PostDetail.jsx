@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import CommentList from '../comments/CommentList.jsx';
 
-const PostDetail = ({ post }) => {
-  const { id, userId, title, body } = post;
+export default class PostDetail extends PureComponent {
 
-  return (
-    <div>
-      <p>id: {id}</p>
-      <p>userId: {userId}</p>
-      <p>title: {title}</p>
-      <p>body: {body}</p>
-    </div>
-  );
-};
+  static propTypes = {
+    post: PropTypes.object.isRequired,
+    fetchComments: PropTypes.func.isRequired
+  };
 
-PostDetail.propTypes = {
-  post: PropTypes.object.isRequired
-};
+  componentDidMount() {
+    const { fetchComments } = this.props;
+    const { id } = this.props.match.params;
+    fetchComments(id);
+  }
 
-export default PostDetail;
+  render() {
+    const { id, userId, title, body } = this.props.post;
+    const { comments } = this.props;
+
+    return (
+      <div>
+        <p>id: {id}</p>
+        <p>userId: {userId}</p>
+        <p>title: {title}</p>
+        <p>body: {body}</p>
+        <CommentList comments={comments} />
+      </div>
+    );
+
+  }
+}
