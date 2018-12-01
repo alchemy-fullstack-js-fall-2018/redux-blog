@@ -14,9 +14,9 @@ describe('post selector', () => {
     expect(getPosts(state)).toEqual(mockPosts);
   });
 
-  test('gets top 10 posts by length', () => {
+  test('gets top 5 posts by length', () => {
     const longestPosts = getLongestPosts(state);
-    expect(longestPosts).toHaveLength(10);
+    expect(longestPosts).toHaveLength(5);
     longestPosts.forEach((post, index, posts) => {
       if(posts[index + 1]) {
         expect(post.body.length).toBeGreaterThanOrEqual(posts[index + 1].body.length);
