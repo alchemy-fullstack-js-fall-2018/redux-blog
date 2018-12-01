@@ -13,6 +13,6 @@ export const getPosts = () => {
   return Promise.resolve(posts);
 };
 export const getComments = id => {
-  return Promise.resolve(comments
-    .filter(comment => comment.postId === id));
+  const postComments = mockCommentsJson.filter(comment => comment.postId === id);
+  return Promise.resolve(postComments);
 };

@@ -33,6 +33,3 @@ CommentList.propTypes = {
 };
 
 export default CommentList;
-
-
-// this.props.fetchComments(this.prop.match.params.id);

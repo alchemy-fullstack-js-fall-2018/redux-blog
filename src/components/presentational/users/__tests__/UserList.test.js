@@ -1,21 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PostList from '../PostList.jsx';
-import mockPosts from '../../../../testing/fixtures/posts.json';
+import UserList from '../UserList.jsx';
+import mockUsers from '../../../../testing/fixtures/users.json';
 
 jest.mock('../../../../routes');
 
-describe('<PostList />', () => {
+describe('<UserList />', () => {
   test('renders', () => {
-    const posts = mockPosts;
-    const fetchPosts = jest.fn();
-    const postUpdateQuery = jest.fn();
+    const users = mockUsers;
+    const fetchUsers = jest.fn();
 
     const wrapper = shallow(
-      <PostList
-        posts={posts}
-        fetchPosts={fetchPosts}
-        postUpdateQuery={postUpdateQuery}
+      <UserList
+        users={users}
+        fetchUsers={fetchUsers}
       />
     );
     expect(wrapper).toMatchSnapshot();

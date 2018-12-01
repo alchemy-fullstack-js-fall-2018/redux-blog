@@ -11,7 +11,6 @@ const StyledDiv = styled.div`
     justify-self: end;
     margin: 5px;
   }
-
   input {
     justify-self: start;
     margin: 5px;
@@ -19,7 +18,6 @@ const StyledDiv = styled.div`
   input[type=text] {
     width: 100%;
   }
-
   select {
     justify-self: start;
     margin: 5px;

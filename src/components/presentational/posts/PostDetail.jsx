@@ -6,6 +6,7 @@ export default class PostDetail extends PureComponent {
 
   static propTypes = {
     post: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired,
     fetchComments: PropTypes.func.isRequired
   };
 

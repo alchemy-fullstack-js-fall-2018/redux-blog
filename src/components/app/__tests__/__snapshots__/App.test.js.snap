@@ -6,8 +6,8 @@ exports[`<App /> renders 1`] = `
     Object {
       "accent": "rgb(173, 38, 36)",
       "darksecondary": "rgb(107, 48, 13)",
-      "primary": "rgb(0, 56, 130)",
-      "secondary": "rgb(247, 181, 18)",
+      "primary": "rgb(0, 153, 0)",
+      "secondary": "rgb(204, 255, 255)",
     }
   }
 >
@@ -36,6 +36,31 @@ exports[`<App /> renders 1`] = `
         component={[Function]}
         exact={true}
         path="/home/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/posts/search"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/posts/:id"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/users"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/users/:id"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/users/new"
       />
       <Redirect
         push={false}

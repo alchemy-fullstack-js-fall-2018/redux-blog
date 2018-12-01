@@ -1,16 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PostDetail from '../PostDetail.jsx';
-import posts from '../../../../testing/fixtures/posts.json';
+import UserDetail from '../UserDetail.jsx';
+import mockUsers from '../../../../testing/fixtures/users.json';
+import mockPosts from '../../../../testing/fixtures/posts.json';
 
-describe('<PostDetail />', () => {
+// import PostList from '../../../presentational/posts/PostList.jsx';
+
+
+describe('<UserDetail />', () => {
   test('renders', () => {
-    const post = posts[0];
-    const fetchComments = jest.fn();
+    const user = mockUsers[0];
+    const posts = mockPosts.filter(post => post.userId === 1);
+    // const PostList = jest.fn();
     const wrapper = shallow(
-      <PostDetail
-        post={post}
-        fetchComments={fetchComments}
+      <UserDetail
+        user={user}
+        posts={posts}
       />
     );
     expect(wrapper).toMatchSnapshot();

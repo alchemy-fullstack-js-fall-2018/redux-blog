@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PostCard from '../PostCard.jsx';
-import mockPosts from '../../../../testing/fixtures/posts.json';
+import UserCard from '../UserCard.jsx';
+import mockUsers from '../../../../testing/fixtures/users.json';
 
-describe('<PostCard />', () => {
+describe('<UserCard />', () => {
   test('renders', () => {
-    const post = mockPosts[0];
+    const user = mockUsers[0];
     const wrapper = shallow(
-      <PostCard
-        post={post}
+      <UserCard
+        user={user}
       />
     );
     expect(wrapper).toMatchSnapshot();

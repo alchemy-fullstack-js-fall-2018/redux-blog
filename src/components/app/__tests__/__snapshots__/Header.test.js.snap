@@ -7,20 +7,26 @@ exports[`<Header /> renders 1`] = `
   </h1>
   <styled.nav>
     <Styled(Link)
-      key="Members"
-      to="/cars/search"
+      key="Home"
+      to="/home"
     >
-      Members
+      Home
     </Styled(Link)>
     <Styled(Link)
-      key="Lot"
-      to="/lot/search"
+      key="Posts"
+      to="/posts/search"
     >
-      Lot
+      Posts
+    </Styled(Link)>
+    <Styled(Link)
+      key="Users"
+      to="/users"
+    >
+      Users
     </Styled(Link)>
     <Styled(Link)
       key="Register"
-      to="/cars/new"
+      to="/users/new"
     >
       Register
     </Styled(Link)>
