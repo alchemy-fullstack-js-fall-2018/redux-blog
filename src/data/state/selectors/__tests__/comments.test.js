@@ -1,7 +1,6 @@
 import { getComments } from '../comments';
 import { mockComments } from '../../../../testing/fixtures/comments';
 
-
 describe('comment selector', () => {
   const state = {
     comments: {

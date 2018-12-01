@@ -1,3 +1,1 @@
-export const getComments = state => {
-  return state.comments.list;
-};
+export const getComments = state => state.comments.list;
