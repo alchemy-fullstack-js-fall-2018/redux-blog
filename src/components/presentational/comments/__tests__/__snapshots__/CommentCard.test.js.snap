@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentCard /> renders 1`] = `
+<styled.div>
+  <p>
+    id: 
+    1
+  </p>
+  <p>
+    postId: 
+    1
+  </p>
+  <p>
+    name: 
+    id labore ex et quam laborum
+  </p>
+  <p>
+    email: 
+    Eliseo@gardner.biz
+  </p>
+  <p>
+    body: 
+    laudantium enim quasi est quidem magnam voluptate ipsam eos
+tempora quo necessitatibus
+dolor quam autem quasi
+reiciendis et nam sapiente accusantium
+  </p>
+</styled.div>
+`;

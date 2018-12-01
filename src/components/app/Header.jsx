@@ -36,9 +36,9 @@ const StyledLink = styled(Link)`
 const Header = () => {
 
   const links = [
-    // { label: 'About', path: '/about' },
     { label: 'Home', path: '/home' },
     { label: 'Posts', path: '/posts/search' },
+    { label: 'Users', path: '/users' },
     { label: 'Register', path: '/users/new' }
   ];
   const LinkComponents = links.map(link => {

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import PostCard from './PostCard.jsx';
+import UserCard from './UserCard.jsx';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
@@ -8,26 +8,24 @@ const StyledDiv = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
 
-export default class PostList extends PureComponent {
+export default class UserList extends PureComponent {
 
   static propTypes = {
-    posts: PropTypes.array.isRequired,
-    fetchPosts: PropTypes.func,
-    postUpdateQuery: PropTypes.func
+    users: PropTypes.array.isRequired,
+    fetchUsers: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
-    const { fetchPosts } = this.props;
-    if(fetchPosts) this.props.fetchPosts();
+    this.props.fetchUsers();
   }
 
   render() {
-    const { posts } = this.props;
-    const postList = posts.map(post => {
+    const { users } = this.props;
+    const userList = users.map(user => {
       return (
-        <PostCard
-          key={post.id}
-          post={post}
+        <UserCard
+          key={user.id}
+          user={user}
         />
       );
     });
@@ -35,7 +33,7 @@ export default class PostList extends PureComponent {
     return (
       <div>
         <StyledDiv>
-          {postList}
+          {userList}
         </StyledDiv>
       </div>
     );
