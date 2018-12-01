@@ -2,9 +2,9 @@ import mockUsersJson from '../fixtures/users.json';
 import mockPostsJson from '../fixtures/posts.json';
 import mockCommentsJson from '../fixtures/comments.json';
 
-const users = JSON.stringify(mockUsersJson);
-const posts = JSON.stringify(mockPostsJson);
-const comments = JSON.stringify(mockCommentsJson);
+const users = mockUsersJson;
+const posts = mockPostsJson;
+const comments = mockCommentsJson;
 
 
 export const getUsers = () => {
@@ -14,7 +14,7 @@ export const getPosts = () => {
   return Promise.resolve(posts);
 };
 export const getComments = id => {
-  const postComments = mockCommentsJson.filter(comment => comment.postId === id);
+  const postComments = comments.filter(comment => comment.postId === id);
   return Promise.resolve(postComments);
 };
 
