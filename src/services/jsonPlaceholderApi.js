@@ -6,3 +6,10 @@ export const getPosts = () => {
       return posts; 
     });
 };
+
+export const getPost = id => {
+  return get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    .then(post => { 
+      return post; 
+    });
+};

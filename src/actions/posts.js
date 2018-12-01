@@ -1,4 +1,4 @@
-import { getPosts } from '../services/jsonPlaceholderApi';
+import { getPosts, getPost } from '../services/jsonPlaceholderApi';
 
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const fetchPosts = () => ({
@@ -6,3 +6,8 @@ export const fetchPosts = () => ({
   payload: getPosts()
 });
 
+export const FETCH_POST = 'FETCH_POST';
+export const fetchPost = id => ({
+  type: FETCH_POST,
+  payload: getPost(id)
+});
