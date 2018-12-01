@@ -3,7 +3,7 @@ import mockPostsJson from '../../../testing/fixtures/posts.json';
 import mockCommentsJson from '../../../testing/fixtures/comments.json';
 import { getUsers, getPosts, getComments } from '../blogApi';
 
-jest.mock('../../lib/request.js', () => ({
+jest.mock('../../lib/request.js', id => ({
   get: url => {
     if(url.startsWith('https://jsonplaceholder.typicode.com/users')) {
       return Promise.resolve(mockUsersJson);
@@ -12,7 +12,8 @@ jest.mock('../../lib/request.js', () => ({
       return Promise.resolve(mockPostsJson);
     }
     if(url.startsWith('https://jsonplaceholder.typicode.com/comments')) {
-      return Promise.resolve(mockCommentsJson);
+      return Promise.resolve(mockCommentsJson
+        .filter(comment => comment.postId === id));
     }
     else {
       return Promise.reject({ error: '404' });
@@ -26,8 +27,8 @@ describe('blogApi user resources', () => {
 
     test('has a list of users with user details', () => {
       return getUsers()
-        .then(results => {
-          results.users.forEach(user => {
+        .then(users => {
+          users.forEach(user => {
             expect(user).toEqual(expect.objectContaining({
               id: expect.any(Number),
               name: expect.any(String),
@@ -64,8 +65,8 @@ describe('blogApi posts resources', () => {
 
     test('has a list of posts with userId, id, title, and body', () => {
       return getPosts()
-        .then(results => {
-          results.posts.forEach(post => {
+        .then(posts => {
+          posts.forEach(post => {
             expect(post).toEqual(expect.objectContaining({
               id: expect.any(Number),
               userId: expect.any(Number),
@@ -83,13 +84,13 @@ describe('blogApi comments resources', () => {
 
   describe('getComments', () => {
 
-    test('has a list of comments with postId, id, name, email, and body', () => {
-      return getComments()
-        .then(results => {
-          results.comments.forEach(comment => {
+    test('has a list of comments for a given postId with id, name, email, and body', () => {
+      return getComments(1)
+        .then(comments => {
+          comments.forEach(comment => {
             expect(comment).toEqual(expect.objectContaining({
+              postId: 1,
               id: expect.any(Number),
-              postId: expect.any(Number),
               name: expect.any(String),
               email: expect.any(String),
               body: expect.any(String)
