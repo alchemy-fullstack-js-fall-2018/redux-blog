@@ -7,6 +7,10 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: BOMBARD;
+    src: url("/src/assets/fonts/BOMBARD.ttf") format("opentype");
+  }
   #root {
     display: flex;
     flex-direction: column;
@@ -21,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
+    font-family: sans-serif;
   }
   body {
     padding: 0;
@@ -45,6 +50,7 @@ const App = () => {
         <Fragment>
           <Helmet>
             <title>Redux Blogging</title>
+            <link rel="icon" href="/src/assets/favicon.ico"/>
           </Helmet>
           <GlobalStyle/>
           <Header />

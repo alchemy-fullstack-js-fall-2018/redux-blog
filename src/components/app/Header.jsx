@@ -5,6 +5,13 @@ import styled from 'styled-components';
 const StyledHeader = styled.header`
   background-color: ${ ({ theme }) => theme.primary };
   color: ${ ({ theme }) => theme.secondary };
+
+  h1 {
+    font-family: BOMBARD, "Avenir Next", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 36px;
+  }
 `;
 
 const StyledNav = styled.nav`
