@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import PostCard from './PostCard.jsx';
 import styled from 'styled-components';
+import PostCard from './PostCard.jsx';
+import Loader from '../../lib/Loader.jsx';
 
 const StyledDiv = styled.div`
   display: grid;
@@ -13,7 +14,8 @@ export default class PostList extends PureComponent {
   static propTypes = {
     posts: PropTypes.array.isRequired,
     fetchPosts: PropTypes.func,
-    postUpdateQuery: PropTypes.func
+    postUpdateQuery: PropTypes.func,
+    isLoading: PropTypes.bool
   };
 
   componentDidMount() {
@@ -22,7 +24,7 @@ export default class PostList extends PureComponent {
   }
 
   render() {
-    const { posts } = this.props;
+    const { posts, isLoading } = this.props;
     const postList = posts.map(post => {
       return (
         <PostCard
@@ -32,11 +34,17 @@ export default class PostList extends PureComponent {
       );
     });
 
+    const gif = 'https://media.giphy.com/media/l41lFw057lAJQMwg0/giphy.gif'
+
     return (
       <div>
-        <StyledDiv>
-          {postList}
-        </StyledDiv>
+        {isLoading ?
+          <Loader src={gif} />
+          :
+          <StyledDiv>
+            {postList}
+          </StyledDiv>
+        }
       </div>
     );
 

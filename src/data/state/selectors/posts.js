@@ -12,3 +12,5 @@ export const getFilteredPosts = state => state.posts.list
 
 export const getPostsForUser = (state, id) => state.posts.list
   .filter(post => post.userId === id);
+
+export const loadingPostsCheck = state => state.posts.loading;
