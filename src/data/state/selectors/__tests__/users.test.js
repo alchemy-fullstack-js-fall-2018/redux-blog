@@ -1,5 +1,5 @@
 import { getUsers } from '../users';
-import { mockUsers } from '../../../../testing/fixtures/users';
+import mockUsers from '../../../../testing/fixtures/users.json';
 
 describe('user selector', () => {
   const state = {

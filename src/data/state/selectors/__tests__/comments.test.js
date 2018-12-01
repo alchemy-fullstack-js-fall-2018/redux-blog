@@ -1,5 +1,5 @@
 import { getComments } from '../comments';
-import { mockComments } from '../../../../testing/fixtures/comments';
+import mockComments from '../../../../testing/fixtures/comments.json';
 
 describe('comment selector', () => {
   const state = {
