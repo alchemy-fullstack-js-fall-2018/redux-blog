@@ -5,28 +5,24 @@ import { get } from './request';
 export const getUsers = () => {
   return get('https://jsonplaceholder.typicode.com/users')
     .then(users => {
-      return {
-        users: users.map(user => ({
-          name: user.name,
-          username: user.username,
-          email: user.email,
-          id: user.id
-        }))
-      };
+      return users.map(user => ({
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        id: user.id
+      }));
     });
 };
 
 export const getPosts = () => {
   return get('https://jsonplaceholder.typicode.com/posts')
     .then(posts => {
-      return {
-        posts: posts.map(post => ({
-          title: post.title,
-          body: post.body,
-          userId: post.userId,
-          id: post.id
-        }))
-      };
+      return posts.map(post => ({
+        title: post.title,
+        body: post.body,
+        userId: post.userId,
+        id: post.id
+      }));
     });
 };
 

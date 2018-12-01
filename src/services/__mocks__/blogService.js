@@ -1,42 +1,11 @@
-const posts = [
-  {
-    userId: 1,
-    id: 1,
-    title: 'a title',
-    body: 'a body'
-  },
-  {
-    userId: 1,
-    id: 2,
-    title: 'a title',
-    body: 'a body'
-  },
-  {
-    userId: 1,
-    id: 3,
-    title: 'a title',
-    body: 'a body'
-  },
-  {
-    userId: 2,
-    id: 4,
-    title: 'a title',
-    body: 'a body'
-  },
-];
+import mockUsersJson from '../fixtures/users.json';
+import mockPostsJson from '../fixtures/posts.json';
+import mockCommentsJson from '../fixtures/comments.json';
 
-const users = [
-  { id: 1,
-    name: 'Leanne Graham',
-    username: 'Bret',
-    email: 'Sincere@april.biz'
-  },
-  { id: 2,
-    name: 'Ervin Howell',
-    username: 'Antonette',
-    email: 'Sincere@april.biz'
-  }
-];
+const users = JSON.stringify(mockUsersJson);
+const posts = JSON.stringify(mockPostsJson);
+const comments = JSON.stringify(mockCommentsJson);
+
 
 export const getPosts = () => {
   return Promise.resolve(posts);
@@ -45,5 +14,10 @@ export const getPosts = () => {
 export const getUsers = () => {
   return Promise.resolve(users);
 };
+
+export const getComments = () => {
+  return Promise.resolve(comments);
+};
+
 
 

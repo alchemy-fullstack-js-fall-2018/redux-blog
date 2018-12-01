@@ -21,15 +21,16 @@ jest.mock('./request.js', () => ({
 describe('blogService', () => {
   it('gets a list of Users with name, username, email and id', () => {
     return getUsers()
-      .then(users => {
-        users.users.forEach(user => {
-          expect(user).toEqual({
+      .then(results => {
+        results.forEach(user => {
+          expect(user).toEqual(expect.objectContaining({
             name: expect.any(String),
             email: expect.any(String),
             username: expect.any(String),
-            id: expect.any(Number),
-          });
+            id: expect.any(Number)
+          }));
         });
       });
   });
+
 });
