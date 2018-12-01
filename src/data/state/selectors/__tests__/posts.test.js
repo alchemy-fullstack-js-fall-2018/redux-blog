@@ -1,4 +1,4 @@
-import { getPosts, getLongestPosts, getFilteredPosts, getPostsForUser } from '../posts';
+import { getPost, getPosts, getLongestPosts, getFilteredPosts, getPostsForUser } from '../posts';
 import mockPosts from '../../../../testing/fixtures/posts.json';
 
 describe('post selector', () => {
@@ -9,6 +9,10 @@ describe('post selector', () => {
       loading: false
     }
   };
+
+  test('get single post by id', () => {
+    expect(getPost(state, 1)).toEqual(mockPosts[0]);
+  });
 
   test('gets post list from state', () => {
     expect(getPosts(state)).toEqual(mockPosts);
