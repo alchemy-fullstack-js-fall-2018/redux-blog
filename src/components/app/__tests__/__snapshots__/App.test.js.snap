@@ -50,17 +50,17 @@ exports[`<App /> renders 1`] = `
       <Route
         component={[Function]}
         exact={true}
+        path="/users/new"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         path="/users"
       />
       <Route
         component={[Function]}
         exact={true}
         path="/users/:id"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/users/new"
       />
       <Redirect
         push={false}
