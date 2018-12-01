@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { fetchPostsPromise } from '../../actions/posts';
 
-export default function Home({ posts }) {
-  return (
-    <div>
-      <h1>Five Longest Posts!</h1>
-      <h4>{ posts }</h4>
-    </div>
-  );
+export default class Home extends Component {
+
+
+
+  // componentDidMount() {
+  //   fetchPostsPromise();
+  // }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello!</h1>
+      </div>
+    );
+  }
 }

@@ -1,7 +1,8 @@
 import { get } from './request';
 
+export const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 export const getPosts = () => {
-  return get('https://jsonplaceholder.typicode.com/posts')
+  return get(POSTS_URL)
     .then((posts) => {
       return {
         posts: posts.map(post => ({
@@ -10,20 +11,6 @@ export const getPosts = () => {
           title: post.title,
           body: post.body
         }))
-      };
-    });
-};
-
-export const getLongestPosts = () => {
-  return get('https://jsonplaceholder.typicode.com/posts')
-    .then((posts) => {
-      posts.sort((a, b) => {
-        if(a.body.length < b.body.length) return 1;
-        if(b.body.length < a.body.length) return -1;
-        return 0;
-      });
-      return {
-        longestPosts: posts.slice(0, 5)
       };
     });
 };
