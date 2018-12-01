@@ -36,8 +36,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-  primary: 'rgb(0, 56, 130)',
-  secondary: 'rgb(247, 181, 18)',
+  primary: 'rgb(0, 153, 0)',
+  secondary: 'rgb(204, 255, 255)',
   darksecondary: 'rgb(107, 48, 13)',
   accent: 'rgb(173, 38, 36)'
 };
@@ -57,6 +57,8 @@ const App = () => {
           <Switch>
             <Route exact component={ROUTES.ABOUT.Component} path={ROUTES.ABOUT.path} />
             <Route exact component={ROUTES.HOME.Component} path={ROUTES.HOME.path} />
+            <Route exact component={ROUTES.POSTS.Component} path={ROUTES.POSTS.path} />
+            <Route exact component={ROUTES.POST_DETAIL.Component} path={ROUTES.POST_DETAIL.path} />
             <Redirect to={ROUTES.HOME.path} />
           </Switch>
           <Footer />

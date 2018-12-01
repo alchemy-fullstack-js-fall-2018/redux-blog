@@ -37,10 +37,9 @@ const Header = () => {
 
   const links = [
     // { label: 'About', path: '/about' },
-    // { label: 'Home', path: '/home' },
-    { label: 'Members', path: '/cars/search' },
-    { label: 'Lot', path: '/lot/search' },
-    { label: 'Register', path: '/cars/new' }
+    { label: 'Home', path: '/home' },
+    { label: 'Posts', path: '/posts/search' },
+    { label: 'Register', path: '/users/new' }
   ];
   const LinkComponents = links.map(link => {
     return (
@@ -52,7 +51,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <h1>Parking Lot</h1>
+      <h1>Redux Blogging</h1>
       <StyledNav>
         {LinkComponents}
       </StyledNav>

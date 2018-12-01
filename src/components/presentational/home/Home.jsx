@@ -1,10 +1,16 @@
 import React from 'react';
+import PostListLongest from '../../container/posts/PostListLongest';
 
 const Home = () => {
+
+  console.log(PostListLongest);
+
+
+
   return (
     <section>
-      <h2>Welcome to Car Trader's Emporium</h2>
-      <p>We have all the cars you will ever need!</p>
+      <h2>Top Posts</h2>
+      {PostListLongest}
     </section>
   );
 };

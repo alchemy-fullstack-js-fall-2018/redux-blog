@@ -12,6 +12,7 @@ export const getUsers = () => {
 export const getPosts = () => {
   return Promise.resolve(posts);
 };
-export const getComments = () => {
-  return Promise.resolve(comments);
+export const getComments = id => {
+  return Promise.resolve(comments
+    .filter(comment => comment.postId === id));
 };

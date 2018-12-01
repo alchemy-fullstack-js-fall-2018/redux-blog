@@ -1,3 +1,6 @@
+export const getPost = (state, id) => state.posts.list
+  .filter(post => post.id === id)[0];
+
 export const getPosts = state =>  state.posts.list;
 
 export const getLongestPosts = state => state.posts.list

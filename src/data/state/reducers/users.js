@@ -1,7 +1,8 @@
 import { FETCH_USERS, USERS_LOAD_START, USERS_LOAD_END } from '../actions/users';
+import mockUsers from '../../../testing/fixtures/users.json';
 
 const initialState = {
-  list: [],
+  list: mockUsers,
   loading: false
 };
 

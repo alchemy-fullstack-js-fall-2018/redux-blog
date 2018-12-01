@@ -1,7 +1,8 @@
 import { FETCH_COMMENTS, COMMENTS_LOAD_START, COMMENTS_LOAD_END } from '../actions/comments';
+import mockComments from '../../../testing/fixtures/comments.json';
 
 const initialState = {
-  list: [],
+  list: mockComments,
   loading: false
 };
 

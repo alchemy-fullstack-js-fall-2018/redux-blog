@@ -1,7 +1,8 @@
 import { FETCH_POSTS, POSTS_LOAD_START, POSTS_LOAD_END, POSTS_UPDATE_QUERY } from '../actions/posts';
+import mockPosts from '../../../testing/fixtures/posts.json';
 
 const initialState = {
-  list: [],
+  list: mockPosts,
   query: '',
   loading: false
 };
