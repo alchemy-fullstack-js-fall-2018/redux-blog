@@ -26,5 +26,7 @@ export default function reducer(state = initialState, { type, payload }) {
       return { ...state, loading: true };
     case USERS_LOAD_END:
       return { ...state, loading: false };
+    default:
+      return state;
   }
 }
