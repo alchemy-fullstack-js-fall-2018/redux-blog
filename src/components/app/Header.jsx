@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CoolLink from '../lib/CoolLink.jsx';
+import LinkButton from '../lib/LinkButton.jsx';
 
 const StyledHeader = styled.header`
   background-color: ${ ({ theme }) => theme.primary };
@@ -27,7 +27,7 @@ const Header = () => {
     { label: 'Register', path: '/users/new' }
   ];
   const LinkComponents = links.map(link => {
-    return <CoolLink key={link.label} path={link.path} label={link.label}/>;
+    return <LinkButton key={link.label} path={link.path} label={link.label}/>;
   });
 
   return (
