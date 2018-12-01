@@ -7,16 +7,15 @@ const posts = JSON.stringify(mockPostsJson);
 const comments = JSON.stringify(mockCommentsJson);
 
 
-export const getPosts = () => {
-  return Promise.resolve(posts);
-};
-
 export const getUsers = () => {
   return Promise.resolve(users);
 };
-
-export const getComments = () => {
-  return Promise.resolve(comments);
+export const getPosts = () => {
+  return Promise.resolve(posts);
+};
+export const getComments = id => {
+  const postComments = mockCommentsJson.filter(comment => comment.postId === id);
+  return Promise.resolve(postComments);
 };
 
 

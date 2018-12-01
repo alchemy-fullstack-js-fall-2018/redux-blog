@@ -16,27 +16,10 @@ export const getUsers = () => {
 
 export const getPosts = () => {
   return get('https://jsonplaceholder.typicode.com/posts')
-    .then(posts => {
-      return posts.map(post => ({
-        title: post.title,
-        body: post.body,
-        userId: post.userId,
-        id: post.id
-      }));
-    });
+    .then(posts => ([...posts]));
 };
 
-export const getComments = (id) => {
+export const getComments = id => {
   return get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
-    .then(comments => {
-      return {
-        comments: comments.map(comment => ({
-          name: comment.name,
-          email: comment.email,
-          body: comment.body,
-          postId: comment.postId,
-          id: comment.id
-        }))
-      };
-    });
+    .then(comments => ([...comments]));
 };
