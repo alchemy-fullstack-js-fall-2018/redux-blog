@@ -5,22 +5,11 @@ import {
   POSTS_LOAD_END
 } from '../actions/posts';
 
+import mockPostsJson from '../services/fixtures/posts.json';
+
 const initialState = {
   searchTerm: '',
-  list: [
-    {
-      userId: 1,
-      id: 1,
-      title: 'a title',
-      body: 'a body'
-    },
-    {
-      userId: 1,
-      id: 2,
-      title: 'another title',
-      body: 'another body'
-    }
-  ],
+  list: mockPostsJson,
   loading: false
 };
 

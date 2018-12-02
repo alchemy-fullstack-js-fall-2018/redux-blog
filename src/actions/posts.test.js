@@ -3,7 +3,7 @@ import {
   FETCH_POSTS,
   POSTS_LOAD_START,
   POSTS_LOAD_END,
-  UPDATE_POST_SEARCH_TERM,
+  UPDATE_POSTS_SEARCH_TERM,
   updatePostSearchTerm,
 } from './posts';
 
@@ -21,10 +21,10 @@ describe('posts', () => {
     expect(action.loadStart).toEqual(POSTS_LOAD_START);
     expect(action.loadEnd).toEqual(POSTS_LOAD_END);
   });
-  
+
   it('recieves a updatedSearchTerm as a a string', () => {
     const action = updatePostSearchTerm('a search term');
     expect(typeof action.payload).toEqual('string');
-    expect(action.type).toEqual(UPDATE_POST_SEARCH_TERM);
+    expect(action.type).toEqual(UPDATE_POSTS_SEARCH_TERM);
   });
 });

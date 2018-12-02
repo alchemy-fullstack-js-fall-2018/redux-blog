@@ -1,8 +1,8 @@
 import { getPosts } from '../services/blogService';
 
-export const UPDATE_POST_SEARCH_TERM = 'UPDATE_POST_SEARCH_TERM';
+export const UPDATE_POSTS_SEARCH_TERM = 'UPDATE_POST_SEARCH_TERM';
 export const updatePostSearchTerm = searchTerm => ({
-  type: UPDATE_POST_SEARCH_TERM,
+  type: UPDATE_POSTS_SEARCH_TERM,
   payload: searchTerm
 });
 
