@@ -5,12 +5,13 @@ import Post from './Post';
 export default class Posts extends PureComponent {
 
   static propTypes = {
-    posts: PropTypes.array.isRequired,
-    fetchPosts: PropTypes.func.isRequired
+    comments: PropTypes.array.isRequired,
+    fetchComments: PropTypes.func.isRequired
+    postId: PropTypes.func
   };
 
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.fetchComments();
   }
 
   render() {

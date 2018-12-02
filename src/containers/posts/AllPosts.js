@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import Posts from '../components/posts/Posts';
-import { getLongPosts } from '../selectors/posts';
-import { fetchPosts } from '../actions/posts';
+import Posts from '../../components/posts/Posts';
+import { getPosts } from '../../selectors/posts';
+import { fetchPosts } from '../../actions/posts';
 
 const mapStateToProps = state => ({
-  posts: getLongPosts(state)
+  posts: getPosts(state)
 });
 
 const mapDispatchToProps = dispatch => ({

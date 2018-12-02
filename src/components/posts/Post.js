@@ -1,12 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function Post({ post }) {
+  const { title, body } = post;
+
   return (
-    <Fragment>
-      <h4>{post.title}</h4>
-      <p>{post.body}</p>
-    </Fragment>
+    <li>{title}
+      <p>{body}</p>
+    </li>
   );
 }
 

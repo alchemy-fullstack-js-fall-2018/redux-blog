@@ -5,8 +5,9 @@ import {
 } from 'react-router-dom';
 
 import AllUsers from './containers/AllUsers';
-import AllPosts from './containers/AllPosts';
-import LongPosts from './containers/LongPosts';
+import AllPosts from './containers/posts/AllPosts';
+import LongPosts from './containers/posts/LongPosts';
+import UserDetail from './components/users/UserDetail';
 
 export const ROUTES = {
   LONG_POSTS: {
@@ -29,6 +30,12 @@ export const ROUTES = {
     linkTo: () => '/allPosts',
     navLink: true,
     label: 'All Posts'
+  },
+  USER_DETAIL: {
+    path: '/users/:id',
+    Component: UserDetail,
+    linkTo: id => `/users/${id}`,
+    navLink: false
   }
 };
 
