@@ -1,12 +1,20 @@
 import { connect } from 'react-redux';
-import Home from '../components/home';
+import Home from '../components/home/Home';
 import { getLongestPosts } from '../selectors/posts';
-import { getPosts } from '../services/blogApi';
+import { fetchPostsPromise } from '../actions/posts';
+// import { getPosts } from '../services/blogApi';
 
 const mapStateToProps = state => ({
   posts: getLongestPosts(state)
 });
 
+const mapDispatchToProps = dispatch => ({
+  fetchPostsPromise: () => {
+    dispatch(fetchPostsPromise());
+  }
+});
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Home);

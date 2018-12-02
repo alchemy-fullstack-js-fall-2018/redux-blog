@@ -1,10 +1,9 @@
-import Header from '../components/header/Header';
-import Home from '../components/home/Home';
+import HomeContainer from '../containers/HomeContainer';
 
 export const ROUTES = {
   HOME: {
     path: '/',
-    Component: Home,
+    Component: HomeContainer,
     linkTo: () => '/'
   }
 };

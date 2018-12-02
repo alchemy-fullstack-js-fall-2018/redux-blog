@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
-import { fetchPostsPromise } from '../../actions/posts';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Home extends Component {
+export default class Home extends PureComponent {
 
+  static propTypes = {
+    posts: PropTypes.array.isRequired
+  };
 
+  fetchPosts = () => {
+    this.props.fetchPostsPromise();
+  };
 
-  // componentDidMount() {
-  //   fetchPostsPromise();
-  // }
+  componentDidMount() {
+    this.fetchPosts();
+  }
 
   render() {
+    const { posts } = this.props;
+
+    const postList = posts.map((post, i) => {
+      return <li key={i}>{post.title}</li>;
+    });
+
     return (
       <div>
-        <h1>Hello!</h1>
+        {posts && <h1>{postList}</h1>}
       </div>
     );
   }

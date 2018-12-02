@@ -1,4 +1,7 @@
 export const get = url => {
   return fetch(url)
-    .then(res => res.json());
+    .then(res => {
+      console.log(res.json());
+      res.json();
+    });
 };
