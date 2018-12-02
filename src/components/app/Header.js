@@ -7,6 +7,7 @@ export default function Header() {
       <nav>
         {navLinks}
       </nav>
+      <h1>Redux Blog</h1>
     </header>
   );
 }

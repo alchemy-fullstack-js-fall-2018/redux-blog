@@ -11,7 +11,6 @@ export default function App() {
     <Router>
       <Fragment>
         <Header />
-        <h1>Redux Blog</h1>
         <Switch>
           {appRoutes}
         </Switch>
