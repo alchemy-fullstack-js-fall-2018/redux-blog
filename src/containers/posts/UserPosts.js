@@ -4,7 +4,7 @@ import { getPostsForUser } from '../../selectors/posts';
 import { fetchPosts } from '../../actions/posts';
 
 const mapStateToProps = (state, props) => ({
-  posts: getPostsForUser(state, props.match.params.id)
+  posts: getPostsForUser(state, props.id)
 });
 
 const mapDispatchToProps = dispatch => ({

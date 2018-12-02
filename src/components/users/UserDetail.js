@@ -14,7 +14,7 @@ export default class UserDetail extends PureComponent {
   }
 
   render() {
-    const { name, username, email } = this.props.user;
+    const { name, username, email, id } = this.props.user;
 
     return (
       <Fragment>
@@ -22,7 +22,7 @@ export default class UserDetail extends PureComponent {
         <h2>Name: {name}</h2>
         <p>Username: {username}</p>
         <p>E-mail: {email}</p>
-        {/* <Posts posts={[]} /> */}
+        <Posts id={id} posts={[]} />
       </Fragment>
     );
   }

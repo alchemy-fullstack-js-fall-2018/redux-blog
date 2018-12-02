@@ -6,7 +6,8 @@ export default class Posts extends PureComponent {
 
   static propTypes = {
     posts: PropTypes.array.isRequired,
-    fetchPosts: PropTypes.func.isRequired
+    fetchPosts: PropTypes.func.isRequired,
+    id: PropTypes.number
   };
 
   componentDidMount() {
