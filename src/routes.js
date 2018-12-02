@@ -9,6 +9,13 @@ import AllPosts from './containers/AllPosts';
 import LongPosts from './containers/LongPosts';
 
 export const ROUTES = {
+  LONG_POSTS: {
+    path: '/',
+    Component: LongPosts,
+    linkTo: () => '/',
+    navLink: true,
+    label: 'Home'
+  },
   ALL_USERS: {
     path: '/allUsers',
     Component: AllUsers,
@@ -22,13 +29,6 @@ export const ROUTES = {
     linkTo: () => '/allPosts',
     navLink: true,
     label: 'All Posts'
-  },
-  LONG_POSTS: {
-    path: '/longPosts',
-    Component: LongPosts,
-    linkTo: () => '/longPosts',
-    navLink: true,
-    label: 'Long Posts'
   }
 };
 
