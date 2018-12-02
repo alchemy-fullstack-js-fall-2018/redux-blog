@@ -1,5 +1,6 @@
 import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import Post from './Post';
 
 export default class Posts extends PureComponent {
 
@@ -15,11 +16,13 @@ export default class Posts extends PureComponent {
   render() {
     const { posts } = this.props;
 
+    const postItems = posts.map(post => <Post key={post.id} post={post} />);
+
     return (
       <Fragment>
         <h2>Posts</h2>
         <ul>
-          {posts.map(post => <li key={post.title}>{post.body}</li>)}
+          {postItems}
         </ul>
       </Fragment>
     );
