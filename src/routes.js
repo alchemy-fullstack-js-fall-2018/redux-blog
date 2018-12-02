@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 
 import AllUsers from './containers/AllUsers';
+import AllPosts from './containers/AllPosts';
+import LongPosts from './containers/LongPosts';
 
 export const ROUTES = {
   ALL_USERS: {
@@ -13,24 +15,38 @@ export const ROUTES = {
     linkTo: () => '/allUsers',
     navLink: true,
     label: 'All Users'
+  },
+  ALL_POSTS: {
+    path: '/allPosts',
+    Component: AllPosts,
+    linkTo: () => '/allPosts',
+    navLink: true,
+    label: 'All Posts'
+  },
+  LONG_POSTS: {
+    path: '/longPosts',
+    Component: LongPosts,
+    linkTo: () => '/longPosts',
+    navLink: true,
+    label: 'Long Posts'
   }
 };
 
 export const navLinks = Object.keys(ROUTES)
-  .filter(routeName => ROUTES[routeName].navLink)
-  .map(routeName => {
+  .filter(key => ROUTES[key].navLink)
+  .map(key => {
     return <Link
-      key={ROUTES[routeName]}
-      to={ROUTES[routeName].linkTo()}>
-      {ROUTES[routeName].label}
+      key={key}
+      to={ROUTES[key].linkTo()}>
+      {ROUTES[key].label}
     </Link>;
   });
 
 export const appRoutes = Object.keys(ROUTES)
-  .map(routeName => {
+  .map(key => {
     return <Route
-      exact key={ROUTES[routeName]}
-      component={ROUTES[routeName].Component}
-      path={ROUTES[routeName].path}
+      exact key={key}
+      component={ROUTES[key].Component}
+      path={ROUTES[key].path}
     />;
   });
