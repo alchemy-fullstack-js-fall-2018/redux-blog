@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { ROUTES } from '../../routes';
 
 function User({ user }) {
-  const { name, username, email, userId } = user;
+  const { name, username, email, id } = user;
 
   return (
     <Fragment>
-      <li><Link to={ROUTES.USER_DETAIL.linkTo(userId)}>{name} ({username}) - {email}</Link></li>
+      <li><Link to={ROUTES.USER_DETAIL.linkTo(id)}>{name} ({username}) - {email}</Link></li>
     </Fragment>
   );
 }

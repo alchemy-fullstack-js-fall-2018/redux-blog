@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
-import UserDetail from '../components/users/Users';
+import UserDetail from '../components/users/UserDetail';
 import { getUsers } from '../selectors/users';
-import {  } from '../actions/posts';
+import { fetchUser } from '../actions/users';
 
 const mapStateToProps = state => ({
-  user: ,
-  fetchPosts:
+  user: getUsers(state)[0] || {}
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPs())
+  fetchUser(id) {
+    dispatch(fetchUser(id));
+  }
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Users);
+)(UserDetail);

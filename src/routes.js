@@ -7,7 +7,7 @@ import {
 import AllUsers from './containers/AllUsers';
 import AllPosts from './containers/posts/AllPosts';
 import LongPosts from './containers/posts/LongPosts';
-import UserDetail from './components/users/UserDetail';
+import UserDetail from './containers/UserDetail';
 
 export const ROUTES = {
   LONG_POSTS: {
