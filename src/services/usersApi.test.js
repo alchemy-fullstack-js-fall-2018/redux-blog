@@ -1,4 +1,4 @@
-import { getUsers } from './usersApi';
+import { fetchUsersApi } from './usersApi';
 import mockUsersJson from './fixtures/mockUsersJson';
 
 jest.mock('./request.js', () => ({
@@ -13,7 +13,7 @@ jest.mock('./request.js', () => ({
 
 describe('user api service', () => {
   it('gets list of users from api', () => {
-    return getUsers()
+    return fetchUsersApi()
       .then(results => {
         expect(results.length).toEqual(10);
       });
