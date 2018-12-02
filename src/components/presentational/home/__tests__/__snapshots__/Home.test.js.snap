@@ -3,10 +3,8 @@
 exports[`<Home /> renders 1`] = `
 <section>
   <h2>
-    This is a blog all about awesome Redux is
+    Top Posts
   </h2>
-  <p>
-    It's obviously the best state management system
-  </p>
+  <Connect(PostList) />
 </section>
 `;

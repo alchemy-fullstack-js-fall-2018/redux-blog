@@ -4,6 +4,8 @@ import UserDetail from '../UserDetail.jsx';
 import mockUsers from '../../../../testing/fixtures/users.json';
 import mockPosts from '../../../../testing/fixtures/posts.json';
 
+jest.mock('../../../../routes');
+
 describe('<UserDetail />', () => {
   test('renders', () => {
     const user = mockUsers[0];
