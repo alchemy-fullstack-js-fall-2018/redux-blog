@@ -1,14 +1,6 @@
-import mockPosts from './fixtures/posts';
 import { getPosts } from './blogApi';
 
-
-jest.mock('./request.js', () => ({
-  get: url => {
-    if(url.startsWith('https://jsonplaceholder.typicode.com/posts')) {
-      return Promise.resolve(mockPosts);
-    }
-  }
-}));
+jest.mock('./blogApi.js');
 
 describe('blogApi', () => {
   describe('getPosts', () => {
@@ -17,7 +9,6 @@ describe('blogApi', () => {
         .then(result => {
           expect(result[0].body).toBeTruthy();
           expect(result[0].id).toBeTruthy();
-          expect(result[0].userId).toBeTruthy();
           expect(result[0].title).toBeTruthy();
         });
     });

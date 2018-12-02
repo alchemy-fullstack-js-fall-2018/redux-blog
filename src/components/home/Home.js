@@ -24,7 +24,7 @@ export default class Home extends PureComponent {
 
     return (
       <div>
-        {posts && <h1>{postList}</h1>}
+        <ul>{postList}</ul>
       </div>
     );
   }
