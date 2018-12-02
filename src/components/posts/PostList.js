@@ -7,7 +7,7 @@ export default class PostList extends PureComponent {
   static propTypes = {
     posts: PropTypes.array.isRequired,
     fetchPosts: PropTypes.func,
-    postUpdateQuery: PropTypes.func,
+    updateSearchTerm: PropTypes.func,
     isLoading: PropTypes.bool
   };
 
@@ -28,7 +28,7 @@ export default class PostList extends PureComponent {
           <Loader />
           :
           <div>
-            { postList }
+            {postList}
           </div>
         }
       </div>

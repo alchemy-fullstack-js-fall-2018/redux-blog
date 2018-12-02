@@ -4,7 +4,7 @@ import {
   POSTS_LOAD_START,
   POSTS_LOAD_END,
   UPDATE_POSTS_SEARCH_TERM,
-  updatePostSearchTerm,
+  updatePostsSearchTerm,
 } from './posts';
 
 jest.mock('../services/blogService');
@@ -23,7 +23,7 @@ describe('posts', () => {
   });
 
   it('recieves a updatedSearchTerm as a a string', () => {
-    const action = updatePostSearchTerm('a search term');
+    const action = updatePostsSearchTerm('a search term');
     expect(typeof action.payload).toEqual('string');
     expect(action.type).toEqual(UPDATE_POSTS_SEARCH_TERM);
   });

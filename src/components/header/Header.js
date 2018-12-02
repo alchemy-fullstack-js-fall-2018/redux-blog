@@ -10,6 +10,7 @@ export default function Header() {
       </div>
       <div>
         <Link to={ROUTES.HOME.linkTo('/home')}>Home</Link>
+        <Link to={ROUTES.POST_SEARCH.linkTo('/posts/search')}>Search Posts</Link>
       </div>
     </header>
   );

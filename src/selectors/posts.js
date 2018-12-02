@@ -1,5 +1,7 @@
 export const getPosts = state => state.posts.list;
 
+export const getPostSearchTerm = state => state.posts.searchTerm;
+
 export const getFilteredPosts = state => state.posts.list
   .filter(post => post.title.includes(state.posts.searchTerm));
 
