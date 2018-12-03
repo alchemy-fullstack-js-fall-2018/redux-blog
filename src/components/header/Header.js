@@ -9,6 +9,7 @@ export default function Header() {
       <h1>BLOGGY McBLOG BLOG!</h1>
       <nav>
         <Link to={ROUTES.HOME.linkTo()}>Home</Link>
+        <Link to={ROUTES.USERS.linkTo()}>Users</Link>
       </nav>
     </div>
   );

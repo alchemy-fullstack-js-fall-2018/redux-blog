@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users component matches snapshot 1`] = `
+<div>
+  <ul>
+    <li
+      key="0"
+    >
+      Leanne Graham
+    </li>
+    <li
+      key="1"
+    >
+      Reanne Graham
+    </li>
+    <li
+      key="2"
+    >
+      Beanne Graham
+    </li>
+  </ul>
+</div>
+`;

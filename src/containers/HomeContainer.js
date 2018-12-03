@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Home from '../components/home/Home';
 import { getLongestPosts } from '../selectors/posts';
 import { fetchPostsPromise } from '../actions/posts';
-// import { getPosts } from '../services/blogApi';
 
 const mapStateToProps = state => ({
   posts: getLongestPosts(state)

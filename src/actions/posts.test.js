@@ -1,4 +1,4 @@
-import { fetchPostsPromise, UPDATE_POSTS } from './posts';
+import { fetchPostsPromise, UPDATE_POSTS, LOAD_POSTS_START, LOAD_POSTS_END } from './posts';
 
 jest.mock('../services/blogApi.js');
 
@@ -7,5 +7,7 @@ describe('posts actions', () => {
     const action = fetchPostsPromise();
     expect(typeof action.payload.then).toBe('function');
     expect(action.type).toEqual(UPDATE_POSTS);
+    expect(action.loadStart).toEqual(LOAD_POSTS_START);
+    expect(action.loadEnd).toEqual(LOAD_POSTS_END);
   });
 });

@@ -1,7 +1,7 @@
-// import { thunk } from './thunk';
 import promiseMiddleware from './promise';
+import { thunk } from './thunk';
 
 export const middleware = [
-  // thunk,
+  thunk,
   promiseMiddleware
 ];

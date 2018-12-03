@@ -14,6 +14,7 @@ export default function App() {
       <Fragment>
         <Header />
         <Switch>
+          <Route component={ROUTES.USERS.Component} path={ROUTES.USERS.path} />
           <Route component={ROUTES.HOME.Component} path={ROUTES.HOME.path} />
         </Switch>
       </Fragment>
