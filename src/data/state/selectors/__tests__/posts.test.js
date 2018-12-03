@@ -2,16 +2,16 @@ import { getPost, getPosts, getLongestPosts, getFilteredPosts, getPostsForUser, 
 import mockPosts from '../../../../testing/fixtures/posts.json';
 
 describe('post selector', () => {
-  const state = {
-    posts: {
-      list: mockPosts,
-      query: 'asdf',
-      loading: false
-    }
-  };
 
-  test('gets query string', () => {
-    expect(getQuery(state)).toEqual('asdf');
+  let state;
+  beforeEach(() => {
+    state = {
+      posts: {
+        list: mockPosts,
+        query: 'asdf',
+        loading: false
+      }
+    };
   });
 
   test('get single post by id', () => {
@@ -56,8 +56,9 @@ describe('post selector', () => {
     expect(loadingPostsCheck(state)).toEqual(false);
   });
 
-
-
+  test('gets query string', () => {
+    expect(getQuery(state)).toEqual('asdf');
+  });
 
 
 });
