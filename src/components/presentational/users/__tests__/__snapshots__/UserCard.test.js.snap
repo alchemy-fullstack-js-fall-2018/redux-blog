@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserCard /> renders 1`] = `
+<styled.div>
+  <p>
+    id: 
+    1
+  </p>
+  <p>
+    name: 
+    Leanne Graham
+  </p>
+  <p>
+    email: 
+    Sincere@april.biz
+  </p>
+  <Link
+    replace={false}
+    to="/users/1"
+  >
+    See more...
+  </Link>
+</styled.div>
+`;

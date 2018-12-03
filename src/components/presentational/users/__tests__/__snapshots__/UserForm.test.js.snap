@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserForm /> renders 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h3>
+    Core Info
+  </h3>
+  <styled.div>
+    <Input
+      name="name"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="username"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="email"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="phone"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="website"
+      onChange={[Function]}
+      resource=""
+    />
+  </styled.div>
+  <h3>
+    Address
+  </h3>
+  <styled.div>
+    <Input
+      name="street"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="suite"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="city"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="zipcode"
+      onChange={[Function]}
+      resource=""
+    />
+  </styled.div>
+  <h3>
+    Company Info
+  </h3>
+  <styled.div>
+    <Input
+      name="companyName"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="motto"
+      onChange={[Function]}
+      resource=""
+    />
+    <Input
+      name="keywords"
+      onChange={[Function]}
+      resource=""
+    />
+  </styled.div>
+  <button
+    type="submit"
+  >
+    Register
+  </button>
+</form>
+`;

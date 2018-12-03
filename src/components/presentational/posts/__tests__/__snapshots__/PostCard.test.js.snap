@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostCard /> renders 1`] = `
+<styled.div>
+  <p>
+    id: 
+    1
+  </p>
+  <p>
+    userId: 
+    1
+  </p>
+  <p>
+    title: 
+    sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+  </p>
+  <p>
+    preview: 
+    quia et suscipit
+suscipit
+  </p>
+  <Link
+    replace={false}
+    to="/posts/1"
+  >
+    See more...
+  </Link>
+</styled.div>
+`;
