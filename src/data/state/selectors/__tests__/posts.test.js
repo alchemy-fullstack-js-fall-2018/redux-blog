@@ -1,4 +1,4 @@
-import { getPost, getPosts, getLongestPosts, getFilteredPosts, getPostsForUser, loadingPostsCheck } from '../posts';
+import { getPost, getPosts, getLongestPosts, getFilteredPosts, getPostsForUser, loadingPostsCheck, getQuery } from '../posts';
 import mockPosts from '../../../../testing/fixtures/posts.json';
 
 describe('post selector', () => {
@@ -9,6 +9,10 @@ describe('post selector', () => {
       loading: false
     }
   };
+
+  test('gets query string', () => {
+    expect(getQuery(state)).toEqual('asdf');
+  });
 
   test('get single post by id', () => {
     expect(getPost(state, 1)).toEqual(mockPosts[0]);
@@ -51,6 +55,8 @@ describe('post selector', () => {
   test('checks for loading status', () => {
     expect(loadingPostsCheck(state)).toEqual(false);
   });
+
+
 
 
 
