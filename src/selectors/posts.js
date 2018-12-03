@@ -1,5 +1,8 @@
 export const getPosts = state => state.posts.list;
 
+export const getPost = (state, id) => state.posts.list
+  .find(post => post.id === id);
+
 export const getPostSearchTerm = state => state.posts.searchTerm;
 
 export const getFilteredPosts = state => state.posts.list

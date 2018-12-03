@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getPostSearchTerm, getFilteredPosts, loadingStatus } from '../selectors/posts';
-import { fetchPosts, updatePostsSearchTerm } from '../actions/posts';
+import { updatePostsSearchTerm } from '../actions/posts';
 import React, { Fragment } from 'react';
 import PostList from '../components/posts/PostList';
 
