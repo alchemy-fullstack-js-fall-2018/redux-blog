@@ -17,8 +17,6 @@ export default class PostDetail extends PureComponent {
     const id = parseInt(this.props.match.params.id);
     const { title, body } = this.props.post;
 
-    console.log('id in PostDetail render', id);
-
     return (
       <Fragment>
         <h2>Post Detail</h2>

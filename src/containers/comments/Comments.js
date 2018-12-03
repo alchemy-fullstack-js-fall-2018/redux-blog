@@ -9,8 +9,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchComments: (postId) => {
-    console.log('id in mapDispatchToProps', postId);
-    console.log('function', fetchComments);
     dispatch(fetchComments(postId));
   }
 });
