@@ -1,9 +1,7 @@
 import { USERS_LOAD_START, USERS_LOAD_END, FETCH_USERS } from '../actions/user';
 
 const initialState = {
-  searchTerm: '',
   loading: false,
-  pages: 0,
   list: []
 },
 
