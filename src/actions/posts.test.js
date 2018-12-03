@@ -2,7 +2,9 @@ import {
   FETCH_POST,
   fetchPost,
   FETCH_POSTS,
-  fetchPosts
+  fetchPosts,
+  UPDATE_SEARCH_TERM,
+  updateSearchTerm
 } from './posts';
 
 jest.mock('../services/postsApi');
@@ -21,5 +23,14 @@ describe('fetchPost (one posts) action', () => {
     const action = fetchPost(id);
     expect(typeof action.payload).toEqual('object');
     expect(action.type).toEqual(FETCH_POST);
+  });
+});
+
+describe('updateSearchTerm action', () => {
+  it('creates an action to update the search term', () => {
+    expect(updateSearchTerm('banana')).toEqual({
+      type: UPDATE_SEARCH_TERM,
+      payload: 'banana'
+    });
   });
 });
