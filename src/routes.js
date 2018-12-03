@@ -2,6 +2,7 @@ import Home from './components/home/Home';
 import FilteredPosts from './containers/FilteredPosts';
 import PostDetail from './containers/PostDetail';
 import AllUsers from './containers/AllUsers';
+import UserDetail from './containers/UserDetail';
 export const ROUTES = {
   HOME: {
     path: '/home',
@@ -23,9 +24,9 @@ export const ROUTES = {
     Component: AllUsers,
     linkTo: () => '/users'
   },
-  // USER_DETAIL: {
-  //   path: '/users/:id',
-  //   Component: UserDetail,
-  //   linkTo: id => `users/${id}`
-  // }
+  USER_DETAIL: {
+    path: '/users/:id',
+    Component: UserDetail,
+    linkTo: id => `/users/${id}`
+  }
 };

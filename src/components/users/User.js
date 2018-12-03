@@ -5,13 +5,13 @@ import { ROUTES } from '../../routes';
 
 const User = ({ user }) => {
   const { id, name, email } = user;
-
+  console.log(id);
   return (
     <Fragment>
       <p>id: {id}</p>
       <p>name: {name}</p>
       <p>email: {email}</p>
-      {/* <Link to={ROUTES.USER_DETAIL.linkTo(id)}>More Details</Link> */}
+      <Link to={ROUTES.USER_DETAIL.linkTo(id)}>More Details</Link>
     </Fragment>
   );
 };
