@@ -1,5 +1,5 @@
 import React from 'react';
-import PostListLongest from '../../container/posts/PostListLongest';
+import PostListLongest from '../../container/posts/PostListLongest.jsx';
 
 const Home = () => {
 

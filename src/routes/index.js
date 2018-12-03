@@ -1,10 +1,10 @@
 import About from '../components/presentational/about/About.jsx';
 import Home from '../components/presentational/home/Home.jsx';
-import PostListFilter from '../components/container/posts/PostListFilter.js';
-import PostDetailId from '../components/container/posts/PostDetailId.js';
-import UserListAll from '../components/container/users/UserListAll';
-import UserDetailId from '../components/container/users/UserDetailId';
-import UserRegister from '../components/container/users/UserRegister';
+import PostListFilter from '../components/container/posts/PostListFilter.jsx';
+import PostDetailId from '../components/container/posts/PostDetailId.jsx';
+import UserListAll from '../components/container/users/UserListAll.jsx';
+import UserDetailId from '../components/container/users/UserDetailId.jsx';
+import UserRegister from '../components/container/users/UserRegister.jsx';
 
 export const ROUTES = {
   ABOUT: {
