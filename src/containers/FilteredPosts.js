@@ -27,8 +27,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateSearchTerm: searchTerm => dispatch(updatePostsSearchTerm(searchTerm)),
-  fetchPosts: () => dispatch(fetchPosts())
+  updateSearchTerm: ({ target }) => dispatch(updatePostsSearchTerm(target.value)),
 });
 
 export default connect(
