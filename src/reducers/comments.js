@@ -1,19 +1,17 @@
-import { UPDATE_POSTS, LOAD_POSTS_START, LOAD_POSTS_END } from '../actions/posts';
+import { UPDATE_COMMENTS, LOAD_COMMENTS_END, LOAD_COMMENTS_START } from '../actions/comments';
 
 const initialState = {
-  searchTerm: '',
   loading: false,
-  posts: []
+  comments: []
 };
-
 export default function reducer(state = initialState, action) {
   const { type, payload } = action;
   switch(type) {
-    case UPDATE_POSTS:
-      return { ...state, posts: payload };
-    case LOAD_POSTS_START:
+    case UPDATE_COMMENTS:
+      return { ...state, comments: payload };
+    case LOAD_COMMENTS_START:
       return { ...state, loading: true };
-    case LOAD_POSTS_END:
+    case LOAD_COMMENTS_END:
       return { ...state, loading: false };
     default:
       return state;
