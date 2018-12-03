@@ -14,3 +14,5 @@ export const getPostsForUser = (state, id) => state.posts.list
   .filter(post => post.userId === id);
 
 export const loadingPostsCheck = state => state.posts.loading;
+
+export const getQuery = state => state.posts.query;
