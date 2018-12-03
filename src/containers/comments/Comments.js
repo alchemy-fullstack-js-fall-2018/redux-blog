@@ -4,12 +4,14 @@ import { getComments } from '../../selectors/comments';
 import { fetchComments } from '../../actions/comments';
 
 const mapStateToProps = (state) => ({
-  posts: getComments(state)
+  comments: getComments(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchComments(id) {
-    dispatch(fetchComments(id));
+  fetchComments: (postId) => {
+    console.log('id in mapDispatchToProps', postId);
+    console.log('function', fetchComments);
+    dispatch(fetchComments(postId));
   }
 });
 

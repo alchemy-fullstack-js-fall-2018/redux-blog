@@ -2,12 +2,12 @@ import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-export default class Posts extends PureComponent {
+export default class Comments extends PureComponent {
 
   static propTypes = {
     comments: PropTypes.array.isRequired,
     fetchComments: PropTypes.func.isRequired,
-    postId: PropTypes.func
+    postId: PropTypes.number
   };
 
   componentDidMount() {
@@ -15,7 +15,7 @@ export default class Posts extends PureComponent {
   }
 
   render() {
-    const { comments } = this.props.comments;
+    const { comments } = this.props;
 
     const commentItems = comments.map(comment => <Comment key={comment.id} comment={comment} />);
 

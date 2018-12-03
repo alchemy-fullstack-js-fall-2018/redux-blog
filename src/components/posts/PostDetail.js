@@ -14,14 +14,17 @@ export default class PostDetail extends PureComponent {
   }
 
   render() {
-    const { title, body, id } = this.props.post;
+    const id = parseInt(this.props.match.params.id);
+    const { title, body } = this.props.post;
+
+    console.log('id in PostDetail render', id);
 
     return (
       <Fragment>
         <h2>Post Detail</h2>
         <h2>Title: {title}</h2>
         <p>Body: {body}</p>
-        {/* <Comments id={id} comments={[]} /> */}
+        <Comments postId={id} />
       </Fragment>
     );
   }

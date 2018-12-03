@@ -1,6 +1,6 @@
 import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Posts from '../../containers/posts/UserPosts';
+import UserPosts from '../../containers/posts/UserPosts';
 
 export default class UserDetail extends PureComponent {
 
@@ -22,7 +22,7 @@ export default class UserDetail extends PureComponent {
         <h2>Name: {name}</h2>
         <p>Username: {username}</p>
         <p>E-mail: {email}</p>
-        <Posts id={id} posts={[]} />
+        <UserPosts id={id} posts={[]} />
       </Fragment>
     );
   }
