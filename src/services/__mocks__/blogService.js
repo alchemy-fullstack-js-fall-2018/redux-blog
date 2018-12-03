@@ -43,6 +43,43 @@ const users = [
   }
 ];
 
+const posts = [
+  {
+    userId: 1,
+    id: 1,
+    title: 'mockTitle',
+    body: 'jesse the body ventura'
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: 'mockTitle2',
+    body: 'jesse the body ventura'
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: 'mockTitle3',
+    body: 'jesse the body ojai'
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: 'mockTitle3',
+    body: 'jesse the body oxnard'
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: 'mockTitle4',
+    body: 'jesse the body carpinteria'
+  },
+];
+
 export const getUsers = () => {
   return Promise.resolve(users);
+};
+
+export const getPosts = () => {
+  return Promise.resolve(posts);
 };
