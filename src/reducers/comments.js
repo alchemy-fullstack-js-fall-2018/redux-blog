@@ -1,11 +1,9 @@
-import { FETCH_POSTS, FETCH_POST } from '../actions/posts';
+import { FETCH_COMMENTS } from '../actions/comments';
 
 export default function reducer(state = [], { type, payload }) {
   switch(type) {
-    case FETCH_POSTS:
+    case FETCH_COMMENTS:
       return payload;
-    case FETCH_POST:
-      return [payload];
     default:
       return state;
   }

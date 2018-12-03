@@ -8,6 +8,7 @@ import AllUsers from './containers/AllUsers';
 import AllPosts from './containers/posts/AllPosts';
 import LongPosts from './containers/posts/LongPosts';
 import UserDetail from './containers/UserDetail';
+import PostDetail from './containers/posts/PostDetail';
 
 export const ROUTES = {
   LONG_POSTS: {
@@ -25,9 +26,9 @@ export const ROUTES = {
     label: 'All Users'
   },
   ALL_POSTS: {
-    path: '/allPosts',
+    path: '/posts',
     Component: AllPosts,
-    linkTo: () => '/allPosts',
+    linkTo: () => '/posts',
     navLink: true,
     label: 'All Posts'
   },
@@ -35,6 +36,12 @@ export const ROUTES = {
     path: '/users/:id',
     Component: UserDetail,
     linkTo: id => `/users/${id}`,
+    navLink: false
+  },
+  POST_DETAIL: {
+    path: '/posts/:id',
+    Component: PostDetail,
+    linkTo: id => `/posts/${id}`,
     navLink: false
   }
 };

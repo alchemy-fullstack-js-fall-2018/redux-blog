@@ -1,29 +1,29 @@
 import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Post from './Post';
+import Comment from './Comment';
 
 export default class Posts extends PureComponent {
 
   static propTypes = {
     comments: PropTypes.array.isRequired,
-    fetchComments: PropTypes.func.isRequired
+    fetchComments: PropTypes.func.isRequired,
     postId: PropTypes.func
   };
 
   componentDidMount() {
-    this.props.fetchComments();
+    this.props.fetchComments(this.props.postId);
   }
 
   render() {
-    const { posts } = this.props;
+    const { comments } = this.props.comments;
 
-    const postItems = posts.map(post => <Post key={post.id} post={post} />);
+    const commentItems = comments.map(comment => <Comment key={comment.id} comment={comment} />);
 
     return (
       <Fragment>
-        <h2>Posts</h2>
+        <h2>Comments</h2>
         <div>
-          {postItems}
+          {commentItems}
         </div>
       </Fragment>
     );

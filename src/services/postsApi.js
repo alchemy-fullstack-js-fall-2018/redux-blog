@@ -7,3 +7,10 @@ export const fetchPostsApi = () => {
       return result;
     });
 };
+
+export const fetchPostApi = (id) => {
+  return get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    .then(result => {
+      return result;
+    });
+};
