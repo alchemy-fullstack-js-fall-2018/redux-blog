@@ -56,7 +56,6 @@ describe('getComments', () => {
   it('gets a list comments from the API belonging to one post', () => {
     return getComments()
       .then(comments => {
-        console.log(comments);
         comments.forEach(comment => {
           expect(comment).toEqual({
             postId: undefined, /* WHY? */
