@@ -11,5 +11,8 @@ export const getPostsForUser = (store, userId) => getPosts(store)
 
 export const getSearchTerm = store => store.posts.searchTerm;
 
-export const getFilteredPosts = (store, searchTerm) => getPosts(store)
-  .filter(post => post.title.includes(searchTerm));
+export const getFilteredPosts = (store) => {
+  const searchTerm = getSearchTerm(store).toUpperCase();
+  return getPosts(store)
+    .filter(post => post.title.toUpperCase().includes(searchTerm));
+};
