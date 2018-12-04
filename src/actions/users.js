@@ -1,6 +1,3 @@
-// FETCH_USERS
-// LOAD_USERS_START
-// LOAD_USERS_END
 import { getUsers as getUsersPromise } from '../services/blogService';
 
 export const LOAD_USERS_START = 'LOAD_USERS_START';

@@ -11,7 +11,7 @@ export default function App() {
     <Fragment>
       <Router>
         <Switch>
-
+          <Route component={ROUTES.ALL_USERS.Component} path={ROUTES.ALL_USERS.path} />
         </Switch>
       </Router>
     </Fragment>

@@ -1,6 +1,10 @@
 import { FETCH_USERS, LOAD_USERS_START, LOAD_USERS_END } from '../actions/users';
+import { fakeUsers } from '../services/fixtures/fakeUsers';
 
-const initialState = [];
+const initialState = {
+  loading: false,
+  users: fakeUsers
+};
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
