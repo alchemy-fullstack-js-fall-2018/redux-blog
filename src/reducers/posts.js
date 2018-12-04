@@ -1,12 +1,15 @@
 import {
   UPDATE_SEARCH_TERM,
   FETCH_POST,
-  FETCH_POSTS
+  FETCH_POSTS,
+  POSTS_LOAD_START,
+  POSTS_LOAD_END
 } from '../actions/posts';
 
 const initialState = {
   list: [],
-  searchTerm: ''
+  searchTerm: '',
+  isLoading: false
 };
 
 export default function reducer(state = initialState, { type, payload }) {
@@ -17,6 +20,10 @@ export default function reducer(state = initialState, { type, payload }) {
       return { ...state, list: [payload] };
     case UPDATE_SEARCH_TERM:
       return { ...state, searchTerm: payload };
+    case POSTS_LOAD_START:
+      return { ...state, loading: true };
+    case POSTS_LOAD_END:
+      return { ...state, loading: false };
     default:
       return state;
   }

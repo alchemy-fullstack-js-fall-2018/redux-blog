@@ -16,3 +16,5 @@ export const getFilteredPosts = (store) => {
   return getPosts(store)
     .filter(post => post.title.toUpperCase().includes(searchTerm));
 };
+
+export const isLoading = store => store.posts.isLoading;
