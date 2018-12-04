@@ -14,9 +14,9 @@ export default function reducer(state = initialState, { type, payload }) {
     case FETCH_COMMENTS:
       return { ...state, list: payload };
     case COMMENTS_LOAD_START:
-      return { ...state, loading: true };
+      return { ...state, isLoading: true };
     case COMMENTS_LOAD_END:
-      return { ...state, loading: false };
+      return { ...state, isLoading: false };
     default:
       return state;
   }

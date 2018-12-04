@@ -21,9 +21,9 @@ export default function reducer(state = initialState, { type, payload }) {
     case UPDATE_SEARCH_TERM:
       return { ...state, searchTerm: payload };
     case POSTS_LOAD_START:
-      return { ...state, loading: true };
+      return { ...state, isLoading: true };
     case POSTS_LOAD_END:
-      return { ...state, loading: false };
+      return { ...state, isLoading: false };
     default:
       return state;
   }
