@@ -12,6 +12,7 @@ export default class Posts extends Component {
     const { fetchPosts } = this.props;
     fetchPosts();
   }
+  
   render() {
     const { posts } = this.props;
     const postComponents = posts.map(post => {

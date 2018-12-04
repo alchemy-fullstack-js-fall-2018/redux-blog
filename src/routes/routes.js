@@ -1,5 +1,5 @@
 import Home from '../components/home/Home';
-import PostDetail from '../components/posts/PostDetail';
+import PostDetail from '../containers/posts/PostDetail';
 
 export default {
   HOME: {
