@@ -1,4 +1,4 @@
-export const getPosts = store => store.posts;
+export const getPosts = store => store.posts.list;
 
 export const getLongPosts = store => getPosts(store)
   .sort(function(a, b) {
@@ -8,6 +8,8 @@ export const getLongPosts = store => getPosts(store)
 
 export const getPostsForUser = (store, userId) => getPosts(store)
   .filter(post => post.userId === userId);
+
+export const getSearchTerm = store => store.posts.searchTerm;
 
 export const getFilteredPosts = (store, searchTerm) => getPosts(store)
   .filter(post => post.title.includes(searchTerm));
