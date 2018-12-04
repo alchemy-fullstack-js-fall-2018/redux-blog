@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import User from './User';
 
 export default class Users extends PureComponent {
   static propTypes = {
@@ -13,9 +14,11 @@ export default class Users extends PureComponent {
     console.log(users);
     const usersComponents = users.map(user => {
       return (
-        <li key={user.id}>
-          {user.name}
-        </li>
+        <User key={user.id}
+          name={user.name}
+          username={user.username}
+          email={user.email}
+        />
       );
     });
 
