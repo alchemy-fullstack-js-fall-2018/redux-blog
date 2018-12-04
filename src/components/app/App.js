@@ -11,6 +11,8 @@ export default function App() {
         <Fragment>
           <Header />
           <Switch>
+            <Route path={ROUTES.USER_DETAIL.path} component={ROUTES.USER_DETAIL.component} />
+            <Route path={ROUTES.USERS.path} component={ROUTES.USERS.component} />
             <Route path={ROUTES.POST_DETAIL.path} component={ROUTES.POST_DETAIL.component} />
             <Route path={ROUTES.HOME.path} component={ROUTES.HOME.component} />
           </Switch>

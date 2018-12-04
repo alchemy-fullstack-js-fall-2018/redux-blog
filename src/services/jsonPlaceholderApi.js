@@ -16,7 +16,18 @@ export const getComments = postId => {
   return get(
     `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
   ).then(comments => {
-    console.log('returned comments', comments);
     return comments;
+  });
+};
+
+export const getUsers = () => {
+  return get('https://jsonplaceholder.typicode.com/users').then(users => {
+    return users;
+  });
+};
+
+export const getUser = id => {
+  return get(`https://jsonplaceholder.typicode.com/users/${id}`).then(user => {
+    return user;
   });
 };

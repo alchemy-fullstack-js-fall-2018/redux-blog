@@ -18,7 +18,6 @@ export default class PostDetail extends Component {
 
   render() {
     const { post, comments, fetchComments, match } = this.props;
-    console.log(comments, 'comments')
     if(!post || !comments) return null;
     return (
       <Fragment>
