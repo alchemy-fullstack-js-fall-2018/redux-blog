@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 import AllUsers from './containers/AllUsers';
-import AllPosts from './containers/posts/AllPosts';
+import FilteredPosts from './containers/posts/FilteredPosts';
 import LongPosts from './containers/posts/LongPosts';
 import UserDetail from './containers/UserDetail';
 import PostDetail from './containers/posts/PostDetail';
@@ -25,12 +25,12 @@ export const ROUTES = {
     navLink: true,
     label: 'All Users'
   },
-  ALL_POSTS: {
+  SEARCH_POSTS: {
     path: '/posts',
-    Component: AllPosts,
+    Component: FilteredPosts,
     linkTo: () => '/posts',
     navLink: true,
-    label: 'All Posts'
+    label: 'Search Posts'
   },
   USER_DETAIL: {
     path: '/users/:id',
