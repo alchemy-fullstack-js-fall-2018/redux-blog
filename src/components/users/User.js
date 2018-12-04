@@ -5,7 +5,6 @@ import { ROUTES } from '../../routes';
 
 const User = ({ user }) => {
   const { id, name, email } = user;
-  console.log(id);
   return (
     <Fragment>
       <p>id: {id}</p>

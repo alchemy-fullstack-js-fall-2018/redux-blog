@@ -12,7 +12,7 @@ export const ROUTES = {
   POST_SEARCH: {
     path: '/posts/search',
     Component: FilteredPosts,
-    linkTo: () => 'posts/search'
+    linkTo: () => '/posts/search'
   },
   POST_DETAIL: {
     path: '/posts/:id',
