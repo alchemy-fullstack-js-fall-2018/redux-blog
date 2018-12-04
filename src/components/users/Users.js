@@ -11,7 +11,6 @@ export default class Users extends PureComponent {
     const { users } = this.props.users;
 
     //do these dudes need to be components?
-    console.log(users);
     const usersComponents = users.map(user => {
       return (
         <User key={user.id}
