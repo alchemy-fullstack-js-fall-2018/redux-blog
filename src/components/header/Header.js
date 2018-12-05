@@ -6,6 +6,8 @@ export default function Header() {
   return (
     <header>
       <nav>
+        <Link to={ROUTES.USERS.linkTo()}>Users</Link>
+        <Link to={ROUTES.POSTS.linkTo()}>Posts</Link>
         <Link to={ROUTES.HOME.linkTo()}>Home</Link>
       </nav>
     </header>
