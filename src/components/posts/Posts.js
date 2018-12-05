@@ -6,7 +6,6 @@ export default class Posts extends Component {
   static propTypes = {
     fetchPosts: PropTypes.func.isRequired,
     posts: PropTypes.array.isRequired,
-    filteredPosts: PropTypes.array.isRequired
   };
 
   componentDidMount() {

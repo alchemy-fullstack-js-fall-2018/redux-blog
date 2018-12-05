@@ -2,14 +2,12 @@ import { connect } from 'react-redux';
 import PostsSearch from '../../components/posts/PostsSearch';
 import {
   getFilteredPosts,
-  getSearchTerm,
-  getPosts
+  getSearchTerm
 } from '../../selectors/posts';
 import { updatePostSearchTerm, fetchPosts } from '../../actions/posts';
 
 const mapStateToProps = state => ({
-  posts: getPosts(state),
-  filteredPosts: getFilteredPosts(state),
+  posts: getFilteredPosts(state),
   searchTerm: getSearchTerm(state)
 });
 
