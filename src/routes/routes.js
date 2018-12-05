@@ -2,7 +2,7 @@ import Home from '../components/home/Home';
 import PostDetail from '../containers/posts/PostDetail';
 import UserDetail from '../containers/users/UserDetail';
 import Users from '../containers/users/Users';
-import Posts from '../containers/posts/Posts';
+import PostsSearch from '../containers/posts/PostsSearch';
 
 export default {
   HOME: {
@@ -10,15 +10,15 @@ export default {
     component: Home,
     linkTo: () => '/'
   },
-  POSTS: {
-    path: '/posts',
-    component: Posts,
-    linkTo: () => '/posts'
-  },
   POST_DETAIL: {
     path: '/posts/:id',
     component: PostDetail,
     linkTo: id => `/posts/${id}`
+  },
+  POSTS_SEARCH: {
+    path: '/posts',
+    component: PostsSearch,
+    linkTo: () => '/posts'
   },
   USERS: {
     path: '/users',

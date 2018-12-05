@@ -13,7 +13,7 @@ export const fetchPost = id => ({
 });
 
 export const UPDATE_POST_SEARCH_TERM = 'UPDATE_POST_SEARCH_TERM';
-export const UpdatePostSearchTerm = searchTerm => ({
+export const updatePostSearchTerm = searchTerm => ({
   type: UPDATE_POST_SEARCH_TERM,
   payload: searchTerm
 });

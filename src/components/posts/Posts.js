@@ -5,14 +5,15 @@ import Post from './Post';
 export default class Posts extends Component {
   static propTypes = {
     fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired
+    posts: PropTypes.array.isRequired,
+    filteredPosts: PropTypes.array.isRequired
   };
 
   componentDidMount() {
     const { fetchPosts } = this.props;
     fetchPosts();
   }
-  
+
   render() {
     const { posts } = this.props;
     const postComponents = posts.map(post => {

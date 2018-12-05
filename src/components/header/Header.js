@@ -7,7 +7,7 @@ export default function Header() {
     <header>
       <nav>
         <Link to={ROUTES.USERS.linkTo()}>Users</Link>
-        <Link to={ROUTES.POSTS.linkTo()}>Posts</Link>
+        <Link to={ROUTES.POSTS_SEARCH.linkTo()}>Posts Search</Link>
         <Link to={ROUTES.HOME.linkTo()}>Home</Link>
       </nav>
     </header>
