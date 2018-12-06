@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const User = ({ user }) => {
-
+const UserDetail = ({ user }) => {
   return (
     <Fragment>
+      <li key={user.id}>{user.id}</li>
       <li>{user.name}</li>
       <li>{user.username}</li>
       <li>{user.email}</li>
-      <li>{user.posts}</li>
+      <li>{user.post}</li>
     </Fragment>
   );
 };
 
-User.propTypes = {
-  car: PropTypes.object.isRequired,
-};
+UserDetail.propTypes = {
+  user: PropTypes.object.isRequired,
+}
 
-export default User;
+export default UserDetail;
