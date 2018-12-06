@@ -1,4 +1,4 @@
-import Home from '../components/home/Home';
+import Home from '../containers/posts/Home';
 import PostDetail from '../containers/posts/PostDetail';
 import UserDetail from '../containers/users/UserDetail';
 import Users from '../containers/users/Users';

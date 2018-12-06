@@ -1,16 +1,26 @@
-import React, { Fragment } from 'react';
-import Posts from '../../containers/posts/Posts';
+import React, { Fragment, PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import Posts from '../posts/Posts';
 
-const Home = () => {
-  return (
-    <Fragment>
-      <h2>Welcome Home</h2>
-      <p>
-        Lorem ipsum dolor Bob Ross... Let’s make a happy little mountain now. You have to make almighty decisions when you’re the creator. Let’s make a nice big leafy tree. Remember how free clouds are. They just lay around in the sky all day long.
-      </p>
-      <Posts />
-    </Fragment>
-  );
-};
+export default class Home extends PureComponent {
+  static propTypes = {
+    fetchPosts: PropTypes.func.isRequired,
+    longestPosts: PropTypes.array.isRequired,
+  };
 
-export default Home;
+  render() {
+    const { longestPosts, fetchPosts } = this.props;
+
+    if(!fetchPosts || !longestPosts) return null;
+    
+    return (
+      <Fragment>
+        <h2>Welcome Home</h2>
+        <p>
+          Lorem ipsum dolor Bob Ross... Let’s make a happy little mountain now. You have to make almighty decisions when you’re the creator. Let’s make a nice big leafy tree. Remember how free clouds are. They just lay around in the sky all day long.
+        </p>
+        <Posts posts={longestPosts} fetchPosts={fetchPosts} />
+      </Fragment>
+    );
+  }
+}
