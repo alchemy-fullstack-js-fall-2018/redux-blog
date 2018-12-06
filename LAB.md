@@ -30,8 +30,11 @@ get users, posts, and comments
 
 * `Home` display the top 5 longest posts
 * `AllUsers` display all users
+* `UserDetail` displays user detail by id
 * `RegisterUser` create a new user
 * `FilterPosts` filter posts by title (for all users)
+* `PostDetail` show on post by id 
+
 
 ### reducers
 

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment snapshot matches previous snapshot 1`] = `
+<Fragment>
+  <h5>
+    id labore ex et quam laborum
+    : 
+    Eliseo@gardner.biz
+  </h5>
+  <p>
+    laudantium enim quasi est quidem magnam voluptate ipsam eos
+tempora quo necessitatibus
+dolor quam autem quasi
+reiciendis et nam sapiente accusantium
+  </p>
+  <br />
+</Fragment>
+`;
