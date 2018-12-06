@@ -10,8 +10,12 @@ export const fetchUsers = () => ({
   payload: getUsers()
 });
 
+export const FETCH_USER_LOADING = 'FETCH_USER_START';
+export const FETCH_USER_DONE = 'FETCH_USER_DONE';
 export const FETCH_USER = 'FETCH_USER';
 export const fetchUser = id => ({
   type: FETCH_USER,
+  loadStart: FETCH_USER_LOADING,
+  loadEnd: FETCH_USER_DONE,
   payload: getUser(id)
 });
