@@ -1,20 +1,27 @@
-import React, { Fragment } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const UserDetail = ({ user }) => {
-  return (
-    <Fragment>
-      <li key={user.id}>{user.id}</li>
-      <li>{user.name}</li>
-      <li>{user.username}</li>
-      <li>{user.email}</li>
-      <li>{user.post}</li>
-    </Fragment>
-  );
-};
+export default class UserDetail extends PureComponent {
 
-UserDetail.propTypes = {
-  user: PropTypes.object.isRequired,
+  static propTypes = {
+    users: PropTypes.object.isRequired,
+    fetchUsers: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    this.props.fetchUser(this.props.match.params.id);
 }
 
-export default UserDetail;
+  render() {
+    const { id, name, username, email } = user;
+
+    return (
+      <Fragment>
+        <h3>User Details</h3>
+        <h3>Name: {name}</h3>
+        <h3>Username: {username}</h3>
+        <h3>Email: {email}</h3>
+      </Fragment>
+    );
+}
+}
