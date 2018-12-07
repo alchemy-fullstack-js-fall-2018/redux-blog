@@ -18,6 +18,7 @@ export default class UserDetail extends PureComponent {
     return (
       <Fragment>
         <h3>User Details</h3>
+        <h3>{id}</h3>
         <h3>Name: {name}</h3>
         <h3>Username: {username}</h3>
         <h3>Email: {email}</h3>

@@ -1,13 +1,13 @@
-import { getRequest } from './request';
+import { get } from './request';
 
 export const getComments = (id) => {
 
-  return getRequest(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
+  return get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
     .then(comments => ([...comments]));
 };
 
 export const getUsers = () => {
-  return getRequest('https://jsonplaceholder.typicode.com/users')
+  return get('https://jsonplaceholder.typicode.com/users')
     .then(users => {
       return {
         users: users.map(user => ({
@@ -20,7 +20,9 @@ export const getUsers = () => {
     });
 };
 
+console.log(getUsers);
+
 export const getPosts = () => {
-  return getRequest('https://jsonplaceholder.typicode.com/Posts')
+  return get('https://jsonplaceholder.typicode.com/Posts')
     .then(posts => ([...posts]));
 };

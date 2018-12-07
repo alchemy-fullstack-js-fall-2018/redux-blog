@@ -14,7 +14,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    port: 8888,
+    port: 8999,
     historyApiFallback: true
   },
   plugins: [

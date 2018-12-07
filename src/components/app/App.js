@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch, Route
 } from 'react-router-dom';
-import ROUTES from '../../routes';
+import { ROUTES } from '../../routes';
 
 export default function App() {
   console.log(ROUTES);
@@ -15,6 +15,8 @@ export default function App() {
       <Router>
         <Switch>
           <Route path={ROUTES.HOME.path} component={ROUTES.HOME.Component} />
+          <Route path={ROUTES.USER_DETAIL.path} component={ROUTES.USER_DETAIL.Component} />
+          <Route path={ROUTES.ALL_USERS.path} component={ROUTES.ALL_USERS.Component} />
         </Switch>
       </Router>
     </Fragment>

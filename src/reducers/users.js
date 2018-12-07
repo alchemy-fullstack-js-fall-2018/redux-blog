@@ -1,14 +1,18 @@
-import { USERS_LOAD_START, USERS_LOAD_END, FETCH_USERS } from '../actions/user';
+import {
+  FETCH_USERS,
+  USERS_LOAD_START,
+  USERS_LOAD_END
+} from '../actions/user';
 
 const initialState = {
   loading: false,
   list: []
-},
+};
 
 export default function reducer( state = initialState, { type, payload }) {
   switch(type) {
     case FETCH_USERS:
-      return { ...state, list: payload.getUsers, pages: payload.pages };
+      return { ...state, list: payload };
     case USERS_LOAD_START:
       return { ...state, loading: true };
     case USERS_LOAD_END:
