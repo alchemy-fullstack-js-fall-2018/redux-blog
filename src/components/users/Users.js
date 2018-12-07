@@ -5,12 +5,14 @@ import User from '../user/User';
 export default class Users extends PureComponent {
 
   static propTypes = {
-    users: PropTypes.object.isRequired,
+    users: PropTypes.array.isRequired,
     fetchUsers: PropTypes.func.isRequired
   }
 
   componentDidMount() {
-    this.fetchUsers();
+    if(this.props.users.length < 1) {
+      this.props.fetchUsers();
+    }
   }
 
   render(){

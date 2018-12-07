@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Home from './components/home/Home';
-import UserDetail from './components/userDetails/UserDetails';
-import Users from './components/users/Users';
+import UserDetail from './containers/UserDetail';
+import AllUsers from './containers/AllUsers';
+import LongPosts from './containers/LongPosts';
 
 export const ROUTES = {
-  HOME: {
-    path: '/',
-    Component: Home,
-    linkTo: () => '/'
+  LONG_POSTS: {
+    path: '/posts',
+    Component: LongPosts,
+    linkTo: () => '/posts'
   },
   USER_DETAIL: {
     path: '/users/:id',
@@ -17,9 +17,11 @@ export const ROUTES = {
   },
   ALL_USERS: {
     path: '/users',
-    Component: Users,
+    Component: AllUsers,
     linkTo: () => '/users'
-  }
+  },
+
+
 
 };
 
