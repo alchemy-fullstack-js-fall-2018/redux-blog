@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 export default class UserDetails extends PureComponent {
 
   static propTypes = {
-    users: PropTypes.object.isRequired,
-    fetchUsers: PropTypes.func.isRequired
+    user: PropTypes.object.isRequired,
+
   }
 
-  componentDidMount() {
-    this.props.fetchUser(this.props.match.params.id);
-}
+//   componentDidMount() {
+//     this.props.fetchUser(this.props.match.params.id);
+// }
 
   render() {
-    const { id, name, username, email } = user;
+    const { name, username, email, id } = this.props.user;
 
     return (
       <Fragment>
